@@ -10,7 +10,7 @@ class App extends Component {
 		return true;
 	}
 
-	componentWillRecieveProps() {
+	componentWillReceiveProps() {
 
 	}
 
@@ -30,7 +30,8 @@ class App extends Component {
 	}
 
 	state = {
-		toggle: true
+		toggle: true,
+		mycontrolledinput: "hello"
 	};
 
 	toggle = () => {
@@ -39,9 +40,14 @@ class App extends Component {
 		});
 	}
 
-
 	submit = (event) => {
+		console.log(this.uncontrolledtext);
+	}
 
+	myOnInputChange = (event) => {
+		this.setState({
+			mycontrolledinput: event.target.value
+		})
 	}
 
 	render() {
@@ -56,9 +62,9 @@ class App extends Component {
 				<button onClick={this.toggle}>Show/Hide</button>
 
 				<div>
-				<input type="text" ref={(input) => this.text = input }/>
-				<input type="email" ref={(input) => this.email = input }/>
-				<button onSubmit={this.submit}>Show value</button>
+					<input type="text" onChange={this.myOnInputChange} value={this.state.mycontrolledinput}/>
+					<input type="text" ref={(input) => this.uncontrolledtext = input }/>
+					<button onSubmit={this.submit}>Show value</button>
 				</div>
 			</div>
 		)
