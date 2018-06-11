@@ -63,7 +63,9 @@ class App extends Component {
 
 				<div>
 					<input type="text" onChange={this.myOnInputChange} value={this.state.mycontrolledinput}/>
-					<input type="text" ref={(input) => this.uncontrolledtext = input }/>
+					<input type="text" ref={(input) => {
+						this.uncontrolledtext = input
+						} }/>
 					<button onSubmit={this.submit}>Show value</button>
 				</div>
 			</div>
