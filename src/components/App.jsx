@@ -1,82 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 
-class App extends Component {
+import Home from './application/Home.jsx';
+import DynamicPage from './application/DynamicPage.jsx';
+import NoMatch from './NoMatch.jsx';
 
-	constructor(props) {
-		super(props);
-	}
-
-	shouldComponentUpdate() {
-		return true;
-	}
-
-	componentWillReceiveProps() {
-
-	}
-
-	componentWillMount() {
-		//Fired before component renders
-		//Changes in state here will not trigger a render
-	}
-
-	componentDidMount() {
-		//Fired just after component renders
-		// Fetch and apis typically called here
-		// If state changes here, it will cause render
-	}
-
-	componentWillUnmount() {
-
-	}
-
-	state = {
-		toggle: true,
-		mycontrolledinput: "hello"
-	};
-
-	toggle = () => {
-		this.setState({
-			toggle: !this.state.toggle
-		});
-	}
-
-	submit = (event) => {
-		console.log(this.uncontrolledtext);
-	}
-
-	myOnInputChange = (event) => {
-		this.setState({
-			mycontrolledinput: event.target.value
-		})
-	}
-
-	render() {
-		return (
+/* Main entry point for Rect app */
+const App = () => {
+	return (
+		<Router>
 			<div>
-				<h1>Hello World, <Name text="Richard"/></h1>
-				
-				{ this.state.toggle && 
-					<p ref= {(goober) => this.myParagraph = goober }>This should show and hide</p>
-				}
-
-				<button onClick={this.toggle}>Show/Hide</button>
-
-				<div>
-					<input type="text" onChange={this.myOnInputChange} value={this.state.mycontrolledinput}/>
-					<input type="text" ref={(input) => {
-						this.uncontrolledtext = input
-						} }/>
-					<button onSubmit={this.submit}>Show value</button>
-				</div>
+				<Switch>
+					<Route exact path="/" component={Home} />
+					<Route exact path="/dynamic" component={DynamicPage} />
+					<Route component={NoMatch} />
+				</Switch>
 			</div>
-		)
-	}
-}
-
-class Name extends Component {
-	render() {
-		return (<em>{this.props.text}</em>)
-	}
-}
+		</Router>
+	);
+};
 
 export default App;
