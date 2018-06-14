@@ -4,7 +4,7 @@
 	"description": "A basic template to setup a React based project, using Webpack",
 	"main": "index.js",
 	"scripts": {
-		"start": "webpack-dev-server --mode development --open --hot",
+		"start": "webpack-dev-server",
 		"build": "webpack --mode production"
 	},
 	"repository": {
@@ -33,7 +33,10 @@
 	"dependencies": {
 		"axios": "^0.18.0",
 		"react": "^16.4.0",
+		"react-delay-render": "^0.1.2",
 		"react-dom": "^16.4.0",
+		"react-hot-loader": "^4.3.2",
+		"react-imported-component": "^4.5.0",
 		"react-overdrive": "0.0.10",
 		"react-prop-types": "^0.4.0",
 		"react-router-dom": "^4.3.1",
@@ -70,7 +73,6 @@
 		"eslint-plugin-jsx-a11y": "^6.0.3",
 		"eslint-plugin-react": "^7.9.1",
 		"html-webpack-plugin": "^3.2.0",
-		"react-hot-loader": "^4.3.2",
 		"style-loader": "^0.21.0",
 		"webpack": "^4.12.0",
 		"webpack-cli": "^3.0.4",

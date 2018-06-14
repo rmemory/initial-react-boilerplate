@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
+import importedComponent from 'react-imported-component';
 
 import Home from './application/Home.jsx';
 import DynamicPage from './application/DynamicPage.jsx';
