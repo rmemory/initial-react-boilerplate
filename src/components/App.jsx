@@ -4,9 +4,14 @@ import importedComponent from 'react-imported-component';
 
 import Home from './Home.jsx';
 import Loading from './Loading.jsx';
+import Timer from './timer/Timer.jsx';
+import MoviesList from './api/MoviesList.jsx';
+import MovieDetail from './api/MovieDetail.jsx';
+import ModalBase from './modal/ModalBase.jsx';
+
 
 const AsyncDynamicPage = importedComponent(
-	() => import(/* webpackChunkName:'DynamicPage' */ './DynamicPage.jsx'),
+	() => import(/* webpackChunkName:'DynamicPage' */ './dynamic/DynamicPage.jsx'),
 	{
 		LoadingComponent: Loading,
 	},
@@ -25,7 +30,11 @@ const App = () =>
 			<div>
 				<Switch>
 					<Route exact path="/" component={Home} />
-					<Route exact path="/dynamic" component={AsyncDynamicPage} />
+					<Route path="/timer" component={Timer} />
+					<Route exact path="/movies" component={MoviesList} />
+					<Route path="/movies/:id" component={MovieDetail} />
+					<Route path="/modal" component={ModalBase} />
+					<Route path="/dynamic" component={AsyncDynamicPage} />
 					<Route component={AsyncNoMatch} />
 				</Switch>
 			</div>

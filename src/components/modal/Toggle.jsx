@@ -2,7 +2,7 @@ import { Component } from 'react';
 import PropTypes from 'prop-types';
 
 /* This is a simple component which maintains a simple
-   true/false state, with an API to toggle the state. 
+   true/false state, with an API to toggle the state.
    It renders the content provided by the client */
 export default class Toggle extends Component {
 	// State
@@ -10,29 +10,30 @@ export default class Toggle extends Component {
 		on: false,
 	}
 
-	/* 
-	  Toggle API 
-	
+	/* Toggle API
+
 	  valueToSetToState: Optional boolean value. When used, that value is
 	  set into state possibly overriding the toggle operation. If not
 	  used, the state value is toggled as normal.
 	*/
 	toggle = (toggleValue) => {
-		valueToSetToState = !this.state.on;
+		let valueToSetToState;
 
-		if (value !== undefined) {
-			valueToSetToState = value;
+		if (toggleValue !== undefined) {
+			valueToSetToState = toggleValue;
+		} else {
+			valueToSetToState = !this.state.on;
 		}
 
+		valueToSetToState = !this.state.on;
 		this.setState({
 			on: valueToSetToState,
 		});
 	}
 
-	/* 
-	  Render
-	  
-	  Calls the children provided by the client, allowing it to 
+	/* Render
+
+	  Calls the children provided by the client, allowing it to
 	  control how its used.
 	 */
 	render() {
