@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 
 import Toggle from './Toggle.jsx';
 import Modal from './Modal.jsx';
+import Form from './Form.jsx';
 import Layout from '../Layout.jsx';
 
 const ModalBase = () => (
@@ -13,7 +14,7 @@ const ModalBase = () => (
 					<Fragment>
 						<button onClick={toggle}>Login</button>
 						<Modal on={on} toggle={toggle}>
-							<h1>This is modal</h1>
+							<Form />
 						</Modal>
 					</Fragment>
 				)

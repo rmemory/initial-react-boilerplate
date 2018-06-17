@@ -1,7 +1,10 @@
+/* eslint-disable react/jsx-indent-props */
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Layout from '../Layout.jsx';
+
+import Styles from './timer-styles.css';
 
 class Timer extends Component {
 	state = { counter: 0 };
@@ -9,7 +12,7 @@ class Timer extends Component {
 	/* Lifecycle methods */
 	componentDidMount() {
 		this.interval = setInterval(
-			this.increment.bind(this),
+			this.increment,
 			1000);
 	}
 
@@ -27,7 +30,11 @@ class Timer extends Component {
 
 		return (
 			<Layout>
-				<PageStyle>This page has been viewed for {counter} seconds </PageStyle>
+				<PageStyle>
+					This page has been viewed for &nbsp;
+					<span className={Styles.timerAnimationFont}>{counter}</span>
+					&nbsp; seconds
+				</PageStyle>
 			</Layout>
 		);
 	}
@@ -36,8 +43,6 @@ class Timer extends Component {
 export default Timer;
 
 const PageStyle = styled.div`
-	font-size: 1rem;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;

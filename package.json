@@ -18,22 +18,11 @@
 		"url": "https://github.com/rmemory/react-boilerplate/issues"
 	},
 	"homepage": "https://github.com/rmemory/react-boilerplate#readme",
-	"dependencies_documentation": {
-		"axios": "^0.18.0",
-		"react": "A painless way to create interactive UIs using JS.",
-		"react-overdrive": "easy magic-move transitions for React apps",
-		"react-dom": "Provides DOM-specific methods for the browser",
-		"react-prop-types": "Runtime type checking for React properties",
-		"react-router-dom": "Provides routing capabilities to React for the browser",
-		"semantic-ui-react": "CSS Framework",
-		"styled-components": "allows you to write actual CSS code to style your components. It also removes the mapping between components and styles ",
-		"react-state": "A fancy component for managing deep state",
-		"react-transition-group": "An easy way to perform animations when a React component enters or leaves the DOM"
-	},
 	"dependencies": {
 		"axios": "^0.18.0",
 		"prop-types": "^15.6.1",
 		"react": "^16.4.0",
+		"react-bootstrap": "^0.32.1",
 		"react-delay-render": "^0.1.2",
 		"react-dom": "^16.4.0",
 		"react-hot-loader": "^4.3.2",
@@ -41,22 +30,9 @@
 		"react-overdrive": "0.0.10",
 		"react-prop-types": "^0.4.0",
 		"react-router-dom": "^4.3.1",
+		"react-transition-group": "^2.3.1",
 		"semantic-ui-react": "^0.81.1",
 		"styled-components": "^3.3.2"
-	},
-	"devDependencies_documentation": {
-		"babel-core": " Core dependencies for Babel, which is a transpiler that compiles JavaScript ES6 to JavaScript ES5 allowing you to write JavaScript from the future so that current browsers will understand it. ",
-		"babel-loader": "This package allows transpiling JavaScript files using Babel and webpack",
-		"babel-polyfill": "Allows usage of promises, weakmap, etc",
-		"babel-preset-env": "With this you don’t have to specify if you will be writing ES2015, ES2016 or ES2017. Babel will automatically detect and transpile accordingly.",
-		"babel-preset-react": " Tells Babel we will be using React",
-		"babel-preset-stage-1": "JS stage-1 features are proposed, which is one step above stage-0: strawman",
-		"css-loader": "Interprets @import and url() like import/require() and will resolve them",
-		"html-webpack-plugin": " Can generate an HTML file for your application, or you can provide a template",
-		"style-loader": "Adds CSS to the DOM by injecting a <style> tag",
-		"eslint and friends": "A ton of help to insure I don't write crappy code",
-		"concurrently": "Allows me to run multiple npm commands concurrently, like npm run watch * npm run watch-less, etc",
-		"webpack and friends": "The magical bundler that pulls it all together, which sorts out all of the imports, components, styles, lazy loading, etc."
 	},
 	"devDependencies": {
 		"babel-core": "^6.26.3",

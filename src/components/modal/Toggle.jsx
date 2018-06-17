@@ -10,24 +10,10 @@ export default class Toggle extends Component {
 		on: false,
 	}
 
-	/* Toggle API
-
-	  valueToSetToState: Optional boolean value. When used, that value is
-	  set into state possibly overriding the toggle operation. If not
-	  used, the state value is toggled as normal.
-	*/
-	toggle = (toggleValue) => {
-		let valueToSetToState;
-
-		if (toggleValue !== undefined) {
-			valueToSetToState = toggleValue;
-		} else {
-			valueToSetToState = !this.state.on;
-		}
-
-		valueToSetToState = !this.state.on;
+	/* Toggle API */
+	toggle = () => {
 		this.setState({
-			on: valueToSetToState,
+			on: !this.state.on,
 		});
 	}
 

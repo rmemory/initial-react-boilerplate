@@ -6,7 +6,7 @@ import Layout from './Layout.jsx';
 const Home = () => (
 	<Layout>
 		<div>
-			<Link to="/timer">Navigate to Timer</Link> {/* eslint-disable-line jsx-a11y/anchor-is-valid */}
+			<Link to="/timer">Navigate to timer</Link> {/* eslint-disable-line jsx-a11y/anchor-is-valid */}
 		</div>
 		<div>
 			<Link to="/dynamic">Navigate to Dynamic Page</Link> {/* eslint-disable-line jsx-a11y/anchor-is-valid */}

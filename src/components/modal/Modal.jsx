@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import Portal from './Portal.jsx';
 import Icon from './Icon.jsx';
 
-// import { Card } from '../Elements';
-
 const Modal = (props) => {
 	const { children, toggle, on } = props;
 	return (
