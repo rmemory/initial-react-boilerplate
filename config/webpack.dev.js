@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 const commonPaths = require('./common-paths');
 const webpack = require('webpack');
 
@@ -37,7 +38,7 @@ const config = {
 	],
 	devServer: {
 		host: 'localhost',
-		port: port,
+		port, // port: port,
 		historyApiFallback: true,
 		hot: true,
 		open: true,

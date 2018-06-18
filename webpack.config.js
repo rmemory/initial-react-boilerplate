@@ -16,7 +16,7 @@ const addons = (/* string | string[] */ addonsArg) => {
 	);
 };
 
-// 'env' will contain the environment variable from 'scripts' 
+// 'env' will contain the environment variable from 'scripts'
 // section in 'package.json'.
 // console.log(env); => { env: 'dev' }
 module.exports = (env) => {

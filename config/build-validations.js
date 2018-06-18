@@ -1,3 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
+
 const chalk = require('chalk');
 
 const ERR_NO_ENV_FLAG = chalk.red(
