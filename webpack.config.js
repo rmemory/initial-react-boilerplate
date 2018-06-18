@@ -8,11 +8,11 @@ const webpackMerge = require('webpack-merge');
 // We will see an example when we set up 'Bundle Analyzer'
 const addons = (/* string | string[] */ addonsArg) => {
 	// Normalize array of addons (flatten)
-	const addons = [...[addonsArg]]
+	const filteredAddons = [...[addonsArg]]
 		.filter(Boolean); // If addons is undefined, filter it out
 
-	return addons.map(addonName =>
-		require(`./config/addons/webpack.${addonName}.js`)
+	return filteredAddons.map(addonName =>
+		require(`./config/addons/webpack.${addonName}.js`), // eslint-disable-line global-require, import/no-dynamic-require
 	);
 };
 
@@ -28,7 +28,7 @@ module.exports = (env) => {
 	// Select which Webpack configuration to use; development
 	// or production
 	// console.log(env.env); => dev
-	const envConfig = require(`./config/webpack.${env.env}.js`);
+	const envConfig = require(`./config/webpack.${env.env}.js`); // eslint-disable-line global-require, import/no-dynamic-require
 
 	// 'webpack-merge' will combine our shared configurations, the
 	// environment specific configurations and any addons we are
