@@ -4,8 +4,11 @@
 	"description": "A basic template to setup a React based project, using Webpack",
 	"main": "index.js",
 	"scripts": {
-		"start": "webpack-dev-server",
-		"build": "webpack --mode production"
+		"dev": "webpack-dev-server",
+		"dev:bundleanalyzer": "npm run dev -- --env.addons=bundleanalyzer",
+		"prebuild": "rimraf dist",
+		"build": "cross-env NODE_ENV=production webpack -p",
+		"build:bundleanalyzer": "npm run build -- --env.addons=bundleanalyzer"
 	},
 	"repository": {
 		"type": "git",
@@ -42,17 +45,24 @@
 		"babel-preset-env": "^1.7.0",
 		"babel-preset-react": "^6.24.1",
 		"babel-preset-stage-1": "^6.24.1",
+		"chalk": "^2.4.1",
 		"concurrently": "^3.5.1",
+		"cross-env": "^5.2.0",
 		"css-loader": "^0.28.11",
 		"eslint": "^4.19.1",
 		"eslint-config-airbnb": "^16.1.0",
 		"eslint-plugin-import": "^2.12.0",
 		"eslint-plugin-jsx-a11y": "^6.0.3",
 		"eslint-plugin-react": "^7.9.1",
+		"extract-text-webpack-plugin": "^4.0.0-beta.0",
 		"html-webpack-plugin": "^3.2.0",
+		"postcss-loader": "^2.1.5",
+		"rimraf": "^2.6.2",
 		"style-loader": "^0.21.0",
 		"webpack": "^4.12.0",
+		"webpack-bundle-analyzer": "^2.13.1",
 		"webpack-cli": "^3.0.4",
-		"webpack-dev-server": "^3.1.4"
+		"webpack-dev-server": "^3.1.4",
+		"webpack-merge": "^4.1.3"
 	}
 }

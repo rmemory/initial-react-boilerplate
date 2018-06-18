@@ -28,7 +28,7 @@ class Timer extends Component {
 
 		return (
 			<PageStyle>
-				This page has been viewed for &nbsp;
+				This page has been open for &nbsp;
 				<span className={Styles.timerAnimationFont}>{counter}</span>
 				&nbsp; seconds
 			</PageStyle>
