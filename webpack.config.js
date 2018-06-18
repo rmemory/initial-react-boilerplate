@@ -77,7 +77,14 @@ module.exports = {
 	/* Module: What types of modules your application will include, in our case we
 	 will support ESNext (Babel) and CSS Modules.
 
-	 rules: How we handle each different type of module
+	 rules: How we handle each different type of module. Here is how rules usually work:
+	 {
+		test: /\.YOUR_FILE_EXTENSION$/,
+		exclude: /SOMETHING THAT IS THAT EXTENSION BUT SHOULD NOT BE PROCESSED/,
+		use: {
+		  loader: "loader for your file extension  or a group of loaders"
+		}
+}
 	 */
 	module: {
 		rules: [
