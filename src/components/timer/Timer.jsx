@@ -2,8 +2,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import Layout from '../Layout.jsx';
-
 import Styles from './timer-styles.css';
 
 class Timer extends Component {
@@ -29,13 +27,11 @@ class Timer extends Component {
 		const { counter } = this.state;
 
 		return (
-			<Layout>
-				<PageStyle>
-					This page has been viewed for &nbsp;
-					<span className={Styles.timerAnimationFont}>{counter}</span>
-					&nbsp; seconds
-				</PageStyle>
-			</Layout>
+			<PageStyle>
+				This page has been viewed for &nbsp;
+				<span className={Styles.timerAnimationFont}>{counter}</span>
+				&nbsp; seconds
+			</PageStyle>
 		);
 	}
 }

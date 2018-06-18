@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Header, Container, Divider, Icon } from 'semantic-ui-react';
 
+import Timer from './timer/Timer.jsx';
 import { pullRight, h1 } from './layout.css';
 
 const Layout = ({ children }) => (
@@ -16,6 +17,8 @@ const Layout = ({ children }) => (
 		{children}
 
 		<Divider />
+
+		<Timer />
 
 		<p className={pullRight}>
 			Page by Richard Memory &nbsp; <Icon name="bicycle" color="blue" />

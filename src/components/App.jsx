@@ -4,7 +4,6 @@ import importedComponent from 'react-imported-component';
 
 import Home from './Home.jsx';
 import Loading from './Loading.jsx';
-import Timer from './timer/Timer.jsx';
 import MoviesList from './api/MoviesList.jsx';
 import MovieDetail from './api/MovieDetail.jsx';
 import ModalBase from './modal/ModalBase.jsx';
@@ -30,7 +29,6 @@ const App = () =>
 			<div>
 				<Switch>
 					<Route exact path="/" component={Home} />
-					<Route path="/timer" component={Timer} />
 					<Route exact path="/movies" component={MoviesList} />
 					<Route path="/movies/:id" component={MovieDetail} />
 					<Route path="/modal" component={ModalBase} />
