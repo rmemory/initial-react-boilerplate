@@ -12,7 +12,7 @@ const ModalBase = () => (
 			/* this.props.children will be a function */
 				({ on, toggle }) => (
 					<Fragment>
-						<button onClick={toggle}>Login</button>
+						<button onClick={toggle}>Click to show modal</button>
 						<Modal on={on} toggle={toggle}>
 							<Form />
 						</Modal>

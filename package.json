@@ -4,10 +4,10 @@
 	"description": "A basic template to setup a React based project, using Webpack",
 	"main": "index.js",
 	"scripts": {
-		"dev": "webpack-dev-server",
+		"dev": "webpack-dev-server --env.env=dev",
 		"dev:bundleanalyzer": "npm run dev -- --env.addons=bundleanalyzer",
 		"prebuild": "rimraf dist",
-		"build": "cross-env NODE_ENV=production webpack -p",
+		"build": "cross-env NODE_ENV=production webpack -p --env.env=prod",
 		"build:bundleanalyzer": "npm run build -- --env.addons=bundleanalyzer"
 	},
 	"repository": {
