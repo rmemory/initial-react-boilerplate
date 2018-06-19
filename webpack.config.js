@@ -2,14 +2,18 @@
 
    This file merges the content from all other webpack config files located in
    the 'config' directory.
+
+   Here is a great course that explains this entire architecture:
+   https://webpack.academy
 */
 
 const webpackMerge = require('webpack-merge');
 
+/* Import a couple common files */
 const buildValidations = require('./config/build-validations');
 const commonConfig = require('./config/webpack.common');
 
-/* Using this method, npm scripts can include Webpack plugins, through the
+/* Using this function, npm scripts can include Webpack plugins, through the
    concept of addons. These do not need to run every time an npm script is
    run. The only current example is the 'Bundle Analyzer', but using this
    mechanism we could add other 'addons' */

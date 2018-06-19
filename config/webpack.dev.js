@@ -13,8 +13,9 @@ const config = {
 	},
 
 	output: {
-		/* Usage of name means there will be a bundle per component, and each will be
-		   hashed */
+		/* Usage of name means there will be a bundle per split out component,
+		   (in our case, app, DynamicPage, NoMatch, and vencor). Each will be
+		   hashed as well */
 		filename: '[name].[hash].js',
 	},
 
@@ -22,18 +23,6 @@ const config = {
 									 bundle. See the following:
 									 http://blog.teamtreehouse.com/introduction-source-maps */
 
-	/* Module: This describes what types of modules your application will
-	   include, in our case we will support ESNext (Babel) and CSS Modules.
-
-	   rules: How we handle each different type of module. Here is how rules
-	   usually work:
-	   {
-		test: /\.YOUR_FILE_EXTENSION$/,
-		exclude: /SOMETHING THAT IS THAT EXTENSION BUT SHOULD NOT BE PROCESSED/,
-		use: {
-		  loader: "loader for your file extension  or a group of loaders"
-	   }
-	 */
 	module: {
 		rules: [
 			{
