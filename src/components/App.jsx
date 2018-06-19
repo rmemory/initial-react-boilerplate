@@ -8,7 +8,10 @@ import MoviesList from './api/MoviesList.jsx';
 import MovieDetail from './api/MovieDetail.jsx';
 import ModalBase from './modal/ModalBase.jsx';
 
-
+/* Imported/dynamic components can be server side rendered.
+   See:
+   https://www.npmjs.com/package/react-imported-component
+   https://github.com/theKashey/react-imported-component */
 const AsyncDynamicPage = importedComponent(
 	() => import(/* webpackChunkName:'DynamicPage' */ './dynamic/DynamicPage.jsx'),
 	{
