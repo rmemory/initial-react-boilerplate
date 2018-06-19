@@ -4,13 +4,20 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
 	mode: 'production',
+
 	entry: {
 		app: ['babel-polyfill', `${commonPaths.appEntry}/index.js`],
 	},
+
 	output: {
 		filename: 'static/[name].[hash].js',
 	},
-	devtool: 'source-map',
+
+	devtool: 'source-map', /* A full SourceMap is emitted as a separate file.
+							  It adds a reference comment to the bundle so
+							  development tools know where to find it. To
+							  entirely omit source maps, remove this line */
+
 	module: {
 		rules: [
 			{
