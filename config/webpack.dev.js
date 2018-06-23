@@ -19,7 +19,7 @@ const config = {
 		filename: '[name].[hash].js',
 	},
 
-	devtool: 'inline-source-map', /* A SourceMap is added as a DataUrl to the
+	devtool: 'cheap-module-source-map', /* A SourceMap is added as a DataUrl to the
 									 bundle. See the following:
 									 http://blog.teamtreehouse.com/introduction-source-maps */
 
@@ -27,19 +27,21 @@ const config = {
 		rules: [
 			{
 				test: /\.css$/,
-				use: [
-					{
-						loader: 'style-loader',
-					},
-					{
-						loader: 'css-loader',
-						options: {
-							modules: true, // { style1, style2 } from ‘./styles.css’)
-							camelCase: true, // .home-button {...} -> import { homeButton } from './styles.css'
-							sourceMap: true,
-						},
-					},
-				],
+				use: ['style-loader', 'css-loader'],
+
+				// use: [
+				// 	{
+				// 		loader: 'style-loader',
+				// 	},
+				// 	{
+				// 		loader: 'css-loader',
+				// 		options: {
+				// 			modules: true, // { style1, style2 } from ‘./styles.css’)
+				// 			camelCase: true, // .home-button {...} -> import { homeButton } from './styles.css'
+				// 			sourceMap: true,
+				// 		},
+				// 	},
+				// ],
 			},
 		],
 	},

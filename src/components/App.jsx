@@ -4,6 +4,9 @@ import importedComponent from 'react-imported-component';
 
 import Home from './Home.jsx';
 import Loading from './Loading.jsx';
+import BasicComponent from './basic/BasicComponent.js';
+import StorePicker from './bike/StorePicker.jsx';
+import BikeStore from './bike/BikeStore.jsx';
 import MoviesList from './api/MoviesList.jsx';
 import MovieDetail from './api/MovieDetail.jsx';
 import ModalBase from './modal/ModalBase.jsx';
@@ -32,8 +35,11 @@ const App = () =>
 			<div>
 				<Switch>
 					<Route exact path="/" component={Home} />
+					<Route path="/basic" component={BasicComponent} />
 					<Route exact path="/movies" component={MoviesList} />
 					<Route path="/movies/:id" component={MovieDetail} />
+					<Route exact path="/bikes" component={StorePicker} />
+					<Route path="/bikes/:storeId" component={BikeStore} />
 					<Route path="/modal" component={ModalBase} />
 					<Route path="/dynamic" component={AsyncDynamicPage} />
 					<Route component={AsyncNoMatch} />
