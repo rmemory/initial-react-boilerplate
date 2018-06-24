@@ -13,7 +13,7 @@ import base from './base';
 const sampleBikes = {
 	bike1: {
 		name: 'Kelson Custom Gravel',
-		image: 'images/kelson.jpg',
+		image: 'https://media.pagefly.io/file/get/ourstory2jpg-1509779331104.jpg',
 		desc: 'The most amazing bike you can ride without suspension',
 		status: 'available',
 		price: 100000,
@@ -21,7 +21,7 @@ const sampleBikes = {
 
 	bike2: {
 		name: 'Trek Emonda SLR6',
-		image: 'images/trek_slr6.jpg',
+		image: 'https://www.trekbicyclesuperstore.com/images/library/large/trek-emonda-slr-6-copy-232289-1.jpg',
 		desc:
 		'The lightest carbon road disc frameset and highest-end carbon wheelset with one of the most exciting advancements ever in road bike technology',
 		status: 'available',
@@ -30,7 +30,7 @@ const sampleBikes = {
 
 	bike3: {
 		name: 'Trek 1120',
-		image: 'images/trek_1120.jpg',
+		image: 'http://www.bikepacking.com/wp-content/uploads/2018/02/Trek-1120-Review__19-740x493.jpg',
 		desc:
 		'The 1120 is a bikepackers dream touring bike',
 		status: 'unavailable',

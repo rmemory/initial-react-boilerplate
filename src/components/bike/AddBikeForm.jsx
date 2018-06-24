@@ -1,22 +1,18 @@
+/* eslint-disable react/jsx-indent-props */
+
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 class AddBikeForm extends React.Component {
-	nameRef = React.createRef();
-	priceRef = React.createRef();
-	statusRef = React.createRef();
-	descRef = React.createRef();
-	imageRef = React.createRef();
-
 	createBike = (event) => {
 		event.preventDefault();
 
 		const bike = {
-			name: this.nameRef.value.value,
-			price: parseFloat(this.priceRef.value.value),
-			status: this.statusRef.value.value,
-			desc: this.descRef.value.value,
-			image: this.imageRef.value.value,
+			name: this.nameInputElement.value,
+			price: parseFloat(this.priceInputElement.value),
+			status: this.statusInputElement.value,
+			desc: this.descInputElement.value,
+			image: this.imageInputElement.value,
 		};
 		this.props.addBikeStateFunc(bike);
 
@@ -26,14 +22,41 @@ class AddBikeForm extends React.Component {
 		return (
 			<Fragment>
 				<form className="fish-edit" onSubmit={this.createBike}>
-					<input name="name" ref={this.nameRef} type="text" placeholder="Name" />
-					<input name="price" ref={this.priceRef} type="text" placeholder="Price" />
-					<select name="status" ref={this.statusRef}>
+					<input
+						name="name"
+						ref={input => // eslint-disable-line no-return-assign
+							this.nameInputElement = input}
+						type="text"
+						placeholder="Name"
+					/>
+					<input
+						name="price"
+						ref={input => // eslint-disable-line no-return-assign
+							this.priceInputElement = input}
+						type="text"
+						placeholder="Price"
+					/>
+					<select
+						name="status"
+						ref={input => // eslint-disable-line no-return-assign
+							this.statusInputElement = input}
+					>
 						<option value="available">Available!</option>
 						<option value="unavailable">Sold Out!</option>
 					</select>
-					<textarea name="desc" ref={this.descRef} placeholder="Desc" />
-					<input name="image" ref={this.imageRef} type="text" placeholder="Image" />
+					<textarea
+						name="desc"
+						ref={input => // eslint-disable-line no-return-assign
+							this.descInputElement = input}
+						placeholder="Desc"
+					/>
+					<input
+						name="image"
+						ref={input => // eslint-disable-line no-return-assign
+							this.imageInputElement = input}
+						type="text"
+						placeholder="Image"
+					/>
 					<button className="submit">+ Add Fish</button>
 				</form>
 			</Fragment>

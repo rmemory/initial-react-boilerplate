@@ -59,14 +59,14 @@ const config = {
 				}],
 			},
 			{
-				test: /\.(jpg|png)(\?v=\d+\.\d+\.\d+)?$/,
-				use: [{
+				// Not working yet
+				test: /\.(jpg|png)$/,
+				use: {
 					loader: 'file-loader',
 					options: {
-						name: '[name].[ext]',
-						outputPath: 'images/',
+						name: '/images/[hash].[ext]',
 					},
-				}],
+				},
 			},
 		],
 	},
