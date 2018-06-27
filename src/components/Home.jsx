@@ -9,6 +9,9 @@ const Home = () => (
 			<Link to="/basic">Navigate to basic example</Link> {/* eslint-disable-line jsx-a11y/anchor-is-valid */}
 		</div>
 		<div>
+			<Link to="/context">Navigate to context API example</Link> {/* eslint-disable-line jsx-a11y/anchor-is-valid */}
+		</div>
+		<div>
 			<Link to="/dynamic">Navigate to dynamic page example</Link> {/* eslint-disable-line jsx-a11y/anchor-is-valid */}
 		</div>
 		<div>
